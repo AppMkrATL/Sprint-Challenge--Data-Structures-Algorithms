@@ -10,7 +10,7 @@ class BinarySearchTree:
       # start going down the left side
       if self.left:
           self.left.depth_first_for_each(cb)
-      # then go down the right side
+      # then go down the right side 
       if self.right:
           self.right.depth_first_for_each(cb)
 
