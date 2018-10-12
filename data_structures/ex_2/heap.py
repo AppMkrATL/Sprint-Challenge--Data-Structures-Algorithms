@@ -1,5 +1,17 @@
 def heapsort(arr):
- pass 
+    # note that this is a max-heap
+    heap = Heap()
+    sorted_list = []
+    # insert each element of the array in the heap
+    for e in arr:  # O(n)
+        heap.insert(e)  # O(log n)
+
+    # heap organizes the data for us, so just get it back out
+    while heap.get_size() > 0:  # O(n)
+        sorted_list.append(heap.delete())  # O(log n)
+
+    # return the reversed list (ascending order)
+    return sorted_list[::-1]  # O(n)
  
 
 class Heap:
